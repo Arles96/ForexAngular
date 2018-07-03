@@ -1,0 +1,18 @@
+<h2 class="text-center m-4" >Lista de Mensajes</h2>
+<div *ngFor="let message of messages | async" >
+  <div class="container-fluid text-center" >
+      <div class="card">                    
+          <div class="card-body">
+              <h5 class="card-title text-center">Titulo: {{message.title}}</h5>
+              <div class="container text-center" >
+                  <i class="img-card fas fa-envelope-square"></i>
+              </div>
+              <p>Correo: {{message.correo}}</p>
+              <p>Estado: {{message.estado}}</p>
+              <br/>
+              <p>Mensaje: {{message.mensaje}}</p>
+          </div>
+      </div>
+      <br/>
+  </div>
+</div>

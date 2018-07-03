@@ -1,0 +1,12 @@
+.img-card {
+    font-size: 100px !important;
+    width: 100px;
+    height: 100px;
+    display: inline;
+    text-align: center;
+}
+
+.card {
+    width: 70% !important;
+    margin: auto;
+}

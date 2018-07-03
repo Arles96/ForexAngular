@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-nav-bar></app-nav-bar>
+<app-home></app-home>
+<div *ngIf="login==false" >
+    <div class="container login">
+        <h2 class="text-center mx-auto" >Autenticación</h2>
+        <p class="mx-auto" >
+            Para poder usar esta aplicación debe de iniciar sesión con 
+            los siguiente proveedor:
+        </p>
+        <button (click)="loginGoogle()" class="btn btn-secondary btn-block" >{{button}}</button>
+    </div>
+</div>
+<div *ngIf="login==true" >
+        <div id="perfil" class="container profile" >
+            <h2 class="text-center" > Perfil </h2>
+            <div class="row">
+                <div class="col-3">
+                    <img class="img-profile" src="{{user.photoURL}}" alt="foto"/>
+                </div>
+                <div class="col-9" >
+                    <br/>
+                    <p><b>Nombre:</b> {{user.displayName}} </p>
+                    <br/>
+                    <p><b>Email</b>: {{user.email}}</p>
+                    <br/>
+                    <p><b>Mensajes Publicos:</b> {{publico}} </p>
+                    <br/>
+                    <p><b>Mensajes Privados:</b> {{privado}}</p>
+                </div>
+            </div>
+            <button (click)="signOutGoogle()" class="btn btn-danger btn-block" >Sign Out</button>
+        </div>
+        <app-form-message email={{email}} ></app-form-message>
+        <br>
+        <app-list-message></app-list-message>
+
+</div>
+<footer class="bg-dark text-center">
+    <p>By Arles Cerrato</p>
+</footer>
+

@@ -1,0 +1,21 @@
+.login {
+    height: 50vh;
+    margin-top: 20vh;
+}
+
+footer {
+    height: 10vh;
+    color: white;
+    padding-top: 4vh; 
+}
+
+.profile {
+    margin-top: 5vh;
+    height: 80vh;
+}
+
+.img-profile {
+    width: 80px !important;
+    height: 80px !important;
+    z-index: 0 !important;
+}
